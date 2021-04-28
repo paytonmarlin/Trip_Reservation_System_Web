@@ -2,10 +2,16 @@
 
 {% block styles %}
     <link rel="stylesheet" href="{{ url_for('static', filename='css/forms.css') }}" rel="stylesheet" type="text/css">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='images/airplane.jpg') }}">
 {% endblock %}
 
 {% block content %}
 <div class="formwrapper">
+  <div id="myTopnav">
+    <a class="link" href="/">Home</a>
+    <a class="link active" href="admin">Admin</a>
+    <a class="link" href="reservations">Reservations</a>
+  </div>
   <h2 class="title">Administrator Login</h2>
   
   <form method="POST" action="/admin">

@@ -142,3 +142,17 @@ i {
 .g-recaptcha div {
   margin: auto;
 }
+
+#myTopnav {
+  text-align: right;
+}
+
+.link {
+  border-right: 1px solid black;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+.active {
+  background-color: rgb(196, 214, 248);
+}

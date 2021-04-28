@@ -2,10 +2,16 @@
 
 {% block styles %}
     <link rel="stylesheet" href="{{ url_for('static', filename='css/forms.css') }}" rel="stylesheet" type="text/css">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='images/airplane.jpg') }}">
 {% endblock %}
 
 {% block content %}
 <div class="formwrapper">
+  <div id="myTopnav">
+    <a class="link active"  href="/">Home</a>
+    <a class="link" href="admin">Admin</a>
+    <a class="link" href="reservations">Reservations</a>
+  </div>
   <h2 class="title">IT-4320 Trip Reservation System</h2>
   <p>Welcome to the IT-4320 reservation system. Use the select box to choose whether to make a reservation or log in as an administrator.</p>
   <form method="POST" action="/">
