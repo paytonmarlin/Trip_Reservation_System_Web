@@ -13,7 +13,12 @@
     <a class="link active" href="reservations">Reservations</a>
   </div>
   <h2 class="title">Reserve Your Seat</h2>
-  
+  {% if chart %}
+    <table id="chart" >
+      <td>{{chart}}</td>
+     
+    </table>
+  {% endif %}
   <form method="POST" action="/admin">
       {{ form.csrf_token }}
       <div class="form-field">{{ form.first_name.label }} {{ form.first_name }}
