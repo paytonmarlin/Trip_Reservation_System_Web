@@ -39,11 +39,17 @@ def GenerateChart():
         seat = int(line[1])
         row = int(line[2])
         seatingChart[seat][row] = "X"
-    for x in seatingChart:
-        seatingChartRevised = x
+    with open('/project/chart.txt', 'w') as writeFile:
+        for x in seatingChart:
+            writeFile.write(' '.join([str(a) for a in x]) + '\n')
     text.close()
-    return seatingChart
+    writeFile.close()
 
+def imageChart():
+    chart = open("/project/chart.txt", "r")
+    content = chart.read()
+    content_split = content.splitlines()
+    return content_split
 
 def Reservations(firstName, row, seat):
     ErrorSeatTaken = "ERROR: This seat is already taken choose another"

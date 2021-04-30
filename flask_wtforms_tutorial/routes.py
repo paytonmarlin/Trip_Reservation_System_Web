@@ -42,7 +42,9 @@ def reservations():
         
             err = Reservations(firstName, row, seat)
 #Return the chart here the things above will be passed to the Generat Chart or maybe another method
-    chart = GenerateChart()
+    GenerateChart()
 
-    return render_template("reservations.html", form=form, template="form-template", err = err,chart = chart) #add the chart = chart and error = error
+    chart = imageChart()
+
+    return render_template("reservations.html", form=form, template="form-template", err = err, chart=chart) #add the chart = chart and error = error
 

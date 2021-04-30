@@ -14,10 +14,9 @@
   </div>
   <h2 class="title">Reserve Your Seat</h2>
   {% if chart %}
-    <table id="chart" >
-      <td>{{chart}}</td>
-     
-    </table>
+    {% for line in chart %}
+    {{ line }}<br/>
+  {% endfor %}
   {% endif %}
   <form method="POST" action="/admin">
       {{ form.csrf_token }}
