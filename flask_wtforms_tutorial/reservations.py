@@ -81,3 +81,12 @@ def Reservations(firstName, row, seat):
     text.write(firstName + ", " + str(seat) + ", " + str(row) + ", " + ticket)
     text.close()
     return None
+
+#This is the function to write to the text file, no error checking here
+def ReservationsTest(firstName, row, seat):
+    #Noah and Shawn's choice
+    flight = "INFOTC4320"
+    ticket = "".join([firstName[i] + flight[i] for i in range(len(firstName))]) + flight[len(firstName):]
+    text = open('/project/reservations.txt', 'a')
+    new_seat = "\n" + firstName+", "+row+", "+seat + ", "+ticket
+    text.write(new_seat)

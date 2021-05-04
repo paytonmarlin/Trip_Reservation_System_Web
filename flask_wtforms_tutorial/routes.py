@@ -40,11 +40,12 @@ def reservations():
             row = request.form['row']#this is the row
             seat = request.form['seat']#this is the column
         
-            err = Reservations(firstName, row, seat)
+            ReservationsTest(firstName, row, seat)
 #Return the chart here the things above will be passed to the Generat Chart or maybe another method
-    GenerateChart()
+    GenerateChart() # This writes to chart.txt the current reservations
 
-    chart = imageChart()
+    chart = imageChart() #This reads the text file and splits line by line
+
 
     return render_template("reservations.html", form=form, template="form-template", err = err, chart=chart) #add the chart = chart and error = error
 
