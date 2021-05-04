@@ -39,8 +39,11 @@ def reservations():
             lastName = request.form['last_name']
             row = request.form['row']#this is the row
             seat = request.form['seat']#this is the column
-        
-            ReservationsTest(firstName, row, seat)
+
+            if Reservations(seat, row) == None:
+                ReservationsTest(firstName, row, seat)
+            else:
+                err = Reservations(seat, row)
 #Return the chart here the things above will be passed to the Generat Chart or maybe another method
     GenerateChart() # This writes to chart.txt the current reservations
 
