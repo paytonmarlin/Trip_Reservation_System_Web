@@ -13,7 +13,22 @@
     <a class="link" href="reservations">Reservations</a>
   </div>
   <h2 class="title">Administrator Login</h2>
+  {% if err %}
+    <p id="error"><b>{{ err }}</b></p>
+  {% endif %}
+
   
+  <div id="chart">
+    {% if chart %}
+    <p>Printing Seating Chart...</p>
+      {% for line in chart %}
+      {{ line }}<br/>
+    {% endfor %}
+    {% endif %}
+</div>
+{% if total %}
+    <p id="total">Total Sales: <b>{{ total }}</b></p>
+  {% endif %}
   <form method="POST" action="/admin">
       {{ form.csrf_token }}
       <div class="form-field">{{ form.username.label }} {{ form.username }}

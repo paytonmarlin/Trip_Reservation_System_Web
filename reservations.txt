@@ -2,10 +2,7 @@ Alice, 0, 2, AIlNiFcOeTC4320
 Bob, 0, 1, BIoNbFOTC4320
 John, 2, 2, JIoNhFnOTC4320
 Mary, 3, 0, MIaNrFyOTC4320
-Tim, 4, 3, TIiNmFOTC4320
-Janae, 5, 1, JIaNnFaOeTC4320
-Cyd, 8, 2, CIyNdFOTC4320
-Frank, 9, 3, FIrNaFnOkTC4320
-Payton, 0, 0, PIaNyFtOoTnC4320
-Joe, 10, 0, JIoNeFOTC4320
-Mason, 3, 0, MIaNsFoOnTC4320
+Joe, 2, 1, JIoNeFOTC4320
+payton, 0, 0, pIaNyFtOoTnC4320
+test, 0, 3, tIeNsFtOTC4320
+Scott, 6, 2, SIcNoFtOtTC4320

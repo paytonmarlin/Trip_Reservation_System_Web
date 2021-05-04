@@ -16,6 +16,9 @@
   {% if err %}
     <p id="error"><b>{{ err }}</b></p>
   {% endif %}
+  {% if success %}
+  <p id="success"><b>{{ success }}</b></p>
+{% endif %}
   <h3>Seating Chart</h3>
   <p>X = Reserved Seat: O = Available Seat</p>
   <div id="chart">
