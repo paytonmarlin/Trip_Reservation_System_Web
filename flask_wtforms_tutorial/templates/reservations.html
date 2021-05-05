@@ -13,8 +13,22 @@
     <a class="link active" href="reservations">Reservations</a>
   </div>
   <h2 class="title">Reserve Your Seat</h2>
-  
-  <form method="POST" action="/admin">
+  {% if err %}
+    <p id="error"><b>{{ err }}</b></p>
+  {% endif %}
+  {% if success %}
+  <p id="success"><b>{{ success }}</b></p>
+{% endif %}
+  <h3>Seating Chart</h3>
+  <p>X = Reserved Seat: O = Available Seat</p>
+  <div id="chart">
+    {% if chart %}
+      {% for line in chart %}
+      {{ line }}<br/>
+    {% endfor %}
+    {% endif %}
+</div>
+  <form method="POST" action="/reservations">
       {{ form.csrf_token }}
       <div class="form-field">{{ form.first_name.label }} {{ form.first_name }}
         {% if form.first_name.errors %}

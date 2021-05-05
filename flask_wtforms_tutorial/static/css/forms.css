@@ -156,3 +156,11 @@ i {
 .active {
   background-color: rgb(196, 214, 248);
 }
+
+#error {
+  color: red;
+}
+
+#chart {
+  align-content: center;
+}
